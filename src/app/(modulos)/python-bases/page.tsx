@@ -3,6 +3,7 @@
 import React from "react";
 import { python } from "@codemirror/lang-python";
 import CodeMirror, { EditorView } from "@uiw/react-codemirror";
+import Image from "next/image";
 import {
   x1,
   x10,
@@ -111,7 +112,7 @@ const Page = () => {
         una mesa, un bolígrafo, etc. Los números enteros, las cadenas, los
         números de punto flotante e incluso las matrices y los diccionarios son
         todos objetos. Más específicamente, cualquier número entero o cualquier
-        cadena es un objeto. El número 12 es un objeto, la cadena "Hola mundo"
+        cadena es un objeto. El número 12 es un objeto, la cadena &quot;Hola mundo&quot;
         es un objeto, una lista es un objeto que puede contener otros objetos,
         etc. Has estado usando objetos todo el tiempo y es posible que ni
         siquiera te des cuenta.
@@ -201,7 +202,7 @@ const Page = () => {
       <p>Aquí, la clase The Dog se define con dos atributos:</p>
       <ul className="list-disc pl-5 flex flex-col gap-1">
         <li>
-          attr1 es un atributo de clase establecido en el valor "mamífero". Los
+          attr1 es un atributo de clase establecido en el valor &quot;mamífero&quot;. Los
           atributos de clase son compartidos por todas las instancias de la
           clase.
         </li>
@@ -335,7 +336,7 @@ const Page = () => {
         Una clase es un ejemplo de encapsulación, ya que encapsula todos los
         datos que son funciones miembro, variables, etc.
       </p>
-      <img src="asdf" alt="NO FOUND PILL" />
+      <Image src="asdf" alt="NO FOUND PILL" width={100} height={50}/>
       <h1 className="text-xl font-bold">Encapsulación en Python</h1>
       <p>
         En el ejemplo anterior, hemos creado la variable c como atributo
