@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { Form } from "../cuestionario/page";
 
 interface PreguntaProps {
   pregunta: string;
@@ -7,14 +8,18 @@ interface PreguntaProps {
   resp2: string;
   resp3: string;
   resp4: string;
+  onChange: Dispatch<SetStateAction<Form>>;
 }
 
 const Pregunta = (props: PreguntaProps) => {
-  const { pregunta, resp1, resp2, resp3, resp4 } = props;
+  const { pregunta, resp1, resp2, resp3, resp4, onChange } = props;
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(event.target.value);
+    onChange(
+      (prev: Form) => ({ ...prev, [pregunta]: event.target.value } as Form)
+    );
   };
 
   return (

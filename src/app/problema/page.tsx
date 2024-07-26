@@ -5,7 +5,7 @@ import { problemas } from "./mockedData";
 const Page = () => {
   return (
     <div className="w-[80%] flex flex-col gap-4">
-      <h2 className="text-3xl font-bold">Page for exercices list</h2>
+      <h2 className="text-3xl font-bold">Problemas</h2>
       <ul className="flex flex-col gap-1">
         {problemas.map((p) => (
           <Link key={p.id} href={`/problema/${p.id}`} className="font-bold">
